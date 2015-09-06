@@ -1,5 +1,5 @@
 // Variable Declarations:
-var usernames = ["mitchelllillie", "patharryux", "jeffdunn", "donguyen", "mkelley2", "josephfraley2", "kathleenkent", "adamtaitano", "jasonsiren", "jtz1983", "erikphansen", "tybrenner"];
+var usernames = ["jenniferminetree", "mitchelllillie", "patharryux", "jeffdunn", "donguyen", "mkelley2", "josephfraley2", "kathleenkent", "adamtaitano", "jasonsiren", "jtz1983", "erikphansen", "tybrenner"];
 var users = [];
 var master = ['izelnakri'];
 var arrayOfAll = [];
@@ -51,6 +51,7 @@ function loadMaster() {
 
 // Function called upon once user enters a new username:
 function myFunction() {
+    $( "div" ).remove();
   var x = document.getElementById("myText").value;
   var y = 12;
     if (x === "") {
@@ -71,12 +72,13 @@ function myFunction() {
         alert("Not A Real User!");
       }
       });
-      if (ajax.error) {
-        return false;
-      }
-      else if (ajax.success) {
-        $( "div" ).remove();
-    }
+  
+      // if (ajax.error) {
+      //   return false;
+      // }
+    //   else if (ajax.success) {
+    //     $( "div" ).remove();
+    // }
 }
 
 //Allows for select drop down menu to run recommendBadgesFor

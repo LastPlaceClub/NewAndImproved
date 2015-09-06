@@ -99,9 +99,9 @@ function score(badgeURL, username) {
 
 			test.push(similarity(username, names[i]));
 		}
-		else {
-			console.log("poop");
-		}
+		// else {
+		// 	console.log("poop");
+		// }
 	}
 		return _.sum(test);
 }
@@ -131,7 +131,22 @@ function recommendBadgesFor(username) {
 			newArray.push(array[m]);
 		}
 	}
-	return (newArray);
+	var sortedArr = newArray.sort(function(a, b) {
+		return (b.score - a.score)
+	})
+
+	sortedArr = _.take(sortedArr, 5)
+
+	$recDiv = $('<div>')
+	$recDiv.appendTo('body')
+	$recDiv.html('Recommended Badges for ' + username)
+
+	for (var d = 0; d < sortedArr.length; d++){
+		var $rec_badge_img = $('<img src="' + sortedArr[d].badge + '">');
+		$recDiv.append($rec_badge_img);	
+	}
+
+	console.log(sortedArr);
 }
 
 
