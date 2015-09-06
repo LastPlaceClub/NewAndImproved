@@ -99,9 +99,9 @@ function score(badgeURL, username) {
 
 			test.push(similarity(username, names[i]));
 		}
-		else {
-			console.log("poop");
-		}
+		// else {
+		// 	console.log("poop");
+		// }
 	}
 		return _.sum(test);
 }
@@ -146,7 +146,6 @@ function recommendBadgesFor(username) {
 		$recDiv.append($rec_badge_img);	
 	}
 
-	
 	console.log(sortedArr);
 }
 

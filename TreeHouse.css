@@ -1,6 +1,9 @@
 
+
 html{
+	background-color: ivory;
 	text-align:center;
+	font-weight: bold;
 	color: black;
 	font-family: sans-serif;
 	background-size:cover;
@@ -26,6 +29,7 @@ img {
 
 img:hover{
 	-webkit-transform: rotate(360deg);
+	opacity: .1;
 
 }
 
